@@ -2,7 +2,7 @@
     --off-white: rgb(207, 207, 207);
     /*--off-white: rgb(36, 36, 36);*/
     --bar-gray: #201f21;
-    --dark-text: #1c1c1c;
+    --dark-text: #000000;
 }
 * {
     color: var(--off-white);
@@ -31,10 +31,6 @@ p {
     margin: 0;
 }
 
-nav {
-
-}
-
 nav ul {
     margin: 0;
     padding: 0;
@@ -42,25 +38,21 @@ nav ul {
     list-style: none;
 }
 
-nav ul li {
-    /*display: inline-block;*/
-    float: left;    
-}
-
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     text-align: center;
     color: var(--off-white);
     display: block;
     padding: 20px 20px;
 
+    /*transition-property: background-color;*/
+    transition-duration: 0.5s;
+
 }
 
 nav li a:hover {
     background-color: #00425a;
-    /*animation-name: hover-fade;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;*/
+    transition-delay: 0;
 }
 
 footer > * {
@@ -91,6 +83,14 @@ footer > * {
     /*height: 100vh;*/
 }
 
+.nav-group-left{
+    float:left;
+}
+
+.nav-group-right{
+    float:right;
+}
+
 #github-img {
     max-width: 30px;
     margin: -10px;
@@ -100,11 +100,6 @@ footer > * {
     color: rgb(255, 190, 125)
 }
 
-@keyframes hover-fade {
-    to {background-color: rgb(88, 88, 88);}
-  }
-
-  
   @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
